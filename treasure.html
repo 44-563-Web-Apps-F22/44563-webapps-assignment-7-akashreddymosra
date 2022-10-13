@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>DOM and callbacks</title>
+  <title>Game of Treasurey</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -20,9 +20,9 @@
         </div><br>
         <div class="d-flex justify-content-center p-2 bg-secondary text-white">  
             <div class="p-2 bg-success flex-fill">Click on the chests to search for treasure</div>
-            <div class="p-2 bg-info flex-fill" id="boxes">Number of chests checked is zero.</div>
-            <div class="p-2 bg-danger flex-fill" id="score">Score is unknown.</div>
-            <div class="p-2 bg-info flex-fill" id="map">Help report</div>
+            <div class="p-2 bg-warning flex-fill" id="chests">Number of chests checked is:</div>
+            <div class="p-2 bg-danger flex-fill" id="score">Score:</div>
+            <div class="p-2 bg-info flex-fill" id="help">help report</div>
         </div>
     </div>
     <br>
@@ -30,19 +30,19 @@
   <div class="container">
     <div class="row">
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C0" onclick="check(0)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C1" onclick="check(1)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C2" onclick="check(2)" alt="treasure box" width="125" height="125"  >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C3" onclick="check(3)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg"  id="C4" onclick="check(4)" alt="treasure box" width="125" height="125">
         </div>
     </div>
 </div>
@@ -50,81 +50,132 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C5" onclick="check(5)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg"  id="C6" onclick="check(6)" alt="treasure box" width="125" height="125">
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C7" onclick="check(7)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C8" onclick="check(8)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
-        </div>
-        <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
-        </div>
-        <div class="col-sm">
-            <img src="Map.jpg" alt="treasure map" width="125" height="125">
-        </div>
-        <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
-        </div>
-        <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C9" onclick="check(9)" alt="treasure box" width="125" height="125" >
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg"  id="C10" onclick="check(10)" alt="treasure box" width="125" height="125">
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C11" onclick="check(11)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="Map.jpg" id="help" onclick="help()" alt="treasure map" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C13" onclick="check(13)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C14" onclick="check(14)" alt="treasure box" width="125" height="125" >
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg"  id="C15" onclick="check(15)" alt="treasure box" width="125" height="125">
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C16" onclick="check(16)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C17" onclick="check(17)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C18" onclick="check(18)" alt="treasure box" width="125" height="125" >
         </div>
         <div class="col-sm">
-            <img src="Treasure.jpg" alt="treasure box" width="125" height="125">
+            <img src="chest.jpg" id="C19" onclick="check(19)" alt="treasure box" width="125" height="125" >
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <img src="chest.jpg" id="C20" onclick="check(20)" alt="treasure box" width="125" height="125" >
+        </div>
+        <div class="col-sm">
+            <img src="chest.jpg" id="C21" onclick="check(21)" alt="treasure box" width="125" height="125" >
+        </div>
+        <div class="col-sm">
+            <img src="chest.jpg" id="C22" onclick="check(22)" alt="treasure box" width="125" height="125" >
+        </div>
+        <div class="col-sm">
+            <img src="chest.jpg" id="C23" onclick="check(23)" alt="treasure box" width="125" height="125" >
+        </div>
+        <div class="col-sm">
+            <img src="chest.jpg" id="C24" onclick="check(24)" alt="treasure box" width="125" height="125" >
         </div>
     </div>
 </div>
 </div>
 <br>
+<script>
+    const ids=["C0","C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20","C21","C22","C23","C24"]
+    var chestCount=0
+    var score =0
+    var astCheck =12
+    var treasureLocation=18 
+    function check(position) {
+        image = document.getElementById(ids[position])
+        if(position == treasureLocation) {
+            image.src = "Treasure.jpg"
+        }
+        else 
+        {
+            image.src = "sad.png"
+        }
+        chestCount += 1
+        score += 1 
+        document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
+        document.getElementById("score").innerHTML = "Score is " + score
+        lastCheck = position;
+    }
+
+    function help() {
+        lastCheck_row = parseInt(lastCheck / 5)
+        lastCheck_column = parseInt(lastCheck % 5)
+        treasureLocation_row = parseInt(treasureLocation / 5)
+        treasureLocation_column = parseInt(treasureLocation % 5)
+        score += 2
+        document.getElementById("score").innerHTML = "Score is " + score
+        if(lastCheck_row == treasureLocation_row) {
+            if(lastCheck_column < treasureLocation_column) {
+                document.getElementById("help").innerHTML = "Right"
+            } else if(lastCheck_column > treasureLocation_column) {
+                document.getElementById("help").innerHTML = "Left"
+            } else {
+                document.getElementById("help").innerHTML = "Sorry, no help available"
+            }
+        } else if(lastCheck_column == treasureLocation_column) {
+            if(lastCheck_row < treasureLocation_row) {
+                document.getElementById("help").innerHTML = "Down"
+            } else if(lastCheck_row > treasureLocation_row) {
+                document.getElementById("help").innerHTML = "Up"
+            } else {
+                document.getElementById("help").innerHTML = "Sorry, no help available"
+            }
+        } else {
+            document.getElementById("help").innerHTML = "Sorry, no help available"
+        }
+    }
+
+</script>
  
  
 </body>
